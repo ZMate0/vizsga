@@ -5,7 +5,7 @@ A vizsgamunka témája egy edzőterem működését támogató webes alkalmazás
 Napjainkban egy edzőterem működtetése során számos adatot kell nyilvántartani, például a vendégek adatait, a bérletek érvényességét, az edzők beosztását és az edzések időpontjait. Ezek kezelése papíralapon vagy különálló táblázatokban időigényes és nehezen átlátható lehet. A GymManager ezeknek a feladatoknak a digitális kezelésére nyújt megoldást.
 
 2. A program célja és funkciói
-A fejlesztés során egy olyan rendszert szeretnék létrehozni, amely a vendégek és az edzőterem dolgozói számára egyaránt hasznos.
+A fejlesztés során egy olyan rendszert szeretnénk létrehozni, amely a vendégek és az edzőterem dolgozói számára egyaránt hasznos.
 
 A vendégek a webes felületen megtekinthetik az elérhető edzéseket, az edzők adatait és a különböző bérlettípusokat. Lehetőségük lesz edzésekre jelentkezni, saját foglalásaikat megtekinteni és szükség esetén lemondani.
 
@@ -29,14 +29,14 @@ Az alkalmazás az edzőterem működéséhez szükséges adatokat strukturált a
 
 Az adatkezelés során fontos szempont az adatok pontossága és a megfelelő ellenőrzés. A rendszernek figyelnie kell például arra, hogy egy foglalás csak létező vendéghez és edzéshez kapcsolódjon, valamint ne lehessen túllépni az edzés maximális létszámát.
 
-A fejlesztés során törekszem az átlátható adatbázis-felépítésre és a megfelelő adatkezelési szabályok kialakítására.
+A fejlesztés során törekszünk az átlátható adatbázis-felépítésre és a megfelelő adatkezelési szabályok kialakítására.
 
 5. Műszaki feltételek
-A program használatához internetböngészővel rendelkező számítógép, laptop vagy mobiltelefon szükséges. A fejlesztéshez Visual Studio, .NET SDK, MySQL adatbázis-kezelő és egy korszerű webböngésző használható.
+A program használatához internetböngészővel rendelkező számítógép, laptop vagy mobiltelefon szükséges. A fejlesztéshez Visual Studio Code, .NET SDK, MySQL adatbázis-kezelő és egy korszerű webböngésző használható.
 
 A szerver futtatásához telepített .NET környezet és elérhető adatbázis szükséges. A pontos verziók és konfigurációs beállítások a fejlesztés során kerülnek meghatározásra.
 
 6. Összegzés
 A GymManager egy olyan webes alkalmazás, amely egy valós edzőtermi problémára kínál digitális megoldást. Segítségével egyszerűbbé válik a vendégek, bérletek, edzők és foglalások kezelése.
 
-A projekt megvalósítása során lehetőségem nyílik a C# programozási nyelv, a REST API-k, az adatbázis-kezelés és a reszponzív webfejlesztés gyakorlati alkalmazására. A célom egy könnyen használható, átlátható és megbízható rendszer létrehozása, amely megfelel a vizsgamunkával szemben támasztott követelményeknek.
+A projekt megvalósítása során lehetőségem nyílik a C# programozási nyelv, a REST API-k, az adatbázis-kezelés és a reszponzív webfejlesztés gyakorlati alkalmazására. A célunk egy könnyen használható, átlátható és megbízható rendszer létrehozása, amely megfelel a vizsgamunkával szemben támasztott követelményeknek.
