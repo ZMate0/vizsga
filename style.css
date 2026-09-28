@@ -1,7 +1,7 @@
-
+/* Google Fonts betűtípusok importálása */
 @import url('https://googleapis.com');
 
-
+/* Globális alapbeállítások */
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +9,12 @@
 }
 
 :root {
-    --bg-dark: #0f172a;       /* Sötétkék/fekete háttér */
-    --bg-card: #1e293b;       /* Kártyák és panelek háttere */
-    --primary-neon: #22c55e;  /* Neon zöld a kiemelésekhez és gombokhoz */
-    --secondary-neon: #06b6d4;/* Akva kék a másodlagos elemekhez */
-    --text-main: #f8fafc;     /* Fő fehér szöveg */
-    --text-muted: #94a3b8;    /* Halványabb szürke szöveg */
-    --border-color: #334155;  /* Keretek színe */
+    --bg-dark: #090d16;       /* Nagyon sötét prémium háttér */
+    --bg-navbar: #111827;     /* Sötét menü háttér */
+    --primary-neon: #72f10b;  /* A logóból vett élénk neon zöld */
+    --text-main: #f8fafc;     
+    --text-muted: #94a3b8;    
+    --border-color: #1f2937;  
 }
 
 body {
@@ -24,16 +23,13 @@ body {
     color: var(--text-main);
     min-height: 100vh;
     line-height: 1.6;
-    overflow-x: hidden;
+    padding-top: 120px; /* Megnövelve, hogy ne takarja ki a tartalmat a magasabb menü */
 }
-
 
 h1, h2, h3 {
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1px;
-    color: #ffffff;
+    letter-spacing: 2px;
 }
-
 
 .container {
     width: 100%;
@@ -42,165 +38,98 @@ h1, h2, h3 {
     padding: 20px;
 }
 
+/* --- FELSŐ INTERAKTÍV MENÜ STÍLUSA --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; /* Megnövelve 120px-re, hogy elférjen a magasabb logó */
+    background-color: var(--bg-navbar);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
 
-a {
+.nav-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Logó egyedi méretezése és nyújtása */
+.nav-logo img {
+    height: 170px;         /* Jelentősen megnövelt magasság */
+    width: 320px;         /* Hozzáigazított szélesség a jó arányokért */
+    display: block;
+    object-fit: fill;     /* Kényszeríti a képet a nagyobb méret kitöltésére */
+}
+
+/* Menüpontok linkjei */
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+}
+
+/* Hover effektus: átváltás neon zöldre */
+.nav-link:hover, .nav-link.active {
     color: var(--primary-neon);
+}
+
+/* Alsó vonal animáció hover esetén */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-neon);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Jobb oldali Join Us gomb stílusa */
+.btn-join {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 2px solid var(--primary-neon);
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    border-radius: 4px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-a:hover {
-    color: var(--secondary-neon);
-}
-
-
-.btn {
-    display: inline-block;
-    padding: 10px 24px;
+.btn-join:hover {
     background-color: var(--primary-neon);
     color: var(--bg-dark);
-    font-weight: 700;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 0 15px rgba(114, 241, 11, 0.6);
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
-}
-
-
-.app-container {
-    display: flex;
-    min-height: 100vh;
-}
-
-
-.sidebar {
-    width: 260px;
-    background-color: var(--bg-card);
-    border-right: 1px solid var(--border-color);
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.logo h1 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.logo span {
-    color: var(--primary-neon);
-}
-
-.nav-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.nav-item {
-    padding: 12px 16px;
-    color: var(--text-muted);
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.nav-item:hover, .nav-item.active {
-    background-color: rgba(34, 197, 94, 0.1);
-    color: var(--primary-neon);
-}
-
-
-.main-content {
-    flex: 1;
-    padding: 40px;
-    background-color: var(--bg-dark);
-}
-
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.main-header h2 {
-    font-size: 2.5rem;
-}
-
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 24px;
-}
-
-.card h3 {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-bottom: 10px;
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.stat-trend {
-    font-size: 0.85rem;
-    color: var(--secondary-neon);
-}
-
-.stat-trend.positive {
-    color: var(--primary-neon);
-}
-
-.workout-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    text-align: left;
-}
-
-.workout-table th, .workout-table td {
-    padding: 14px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.workout-table th {
-    color: var(--text-muted);
-    font-weight: 600;
-}
-
-
-.badge {
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.badge-done { background-color: rgba(34, 197, 94, 0.2); color: var(--primary-neon); }
-.badge-progress { background-color: rgba(6, 182, 212, 0.2); color: var(--secondary-neon); }
-.badge-pending { background-color: rgba(234, 179, 8, 0.2); color: #eab308; }
-
-
+/* Reszponzív beállítás mobilos nézethez */
 @media (max-width: 768px) {
-    .app-container { flex-direction: column; }
-    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border-color); }
-    .main-content { padding: 20px; }
+    .nav-links, .nav-actions { display: none; } 
 }

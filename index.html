@@ -5,92 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>GyManager - Dashboard</title>
+    <title>GyManager</title>
 </head>
 <body>
 
-    <!-- Fő konténer, ami kettéosztja az oldalt (Menü + Tartalom) -->
-    <div class="app-container">
-        
-        <!-- OLDALSÓ MENÜ (Sidebar) -->
-        <aside class="sidebar">
-            <div class="logo">
-                <h1>Gy<span>Manager</span></h1>
+    <!-- FELSŐ INTERAKTÍV MENÜ -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Javított, nyújtott logó konténer -->
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="GyManager Logo">
             </div>
-            <nav class="nav-menu">
-                <a href="#" class="nav-item active">🏋️ Irányítópult</a>
-                <a href="#" class="nav-item">📅 Edzéstervek</a>
-                <a href="#" class="nav-item">👥 Tagok</a>
-                <a href="#" class="nav-item">📊 Statisztikák</a>
-                <a href="#" class="nav-item">⚙️ Beállítások</a>
-            </nav>
-        </aside>
-
-        <!-- FŐ TARTALMI RÉSZ -->
-        <main class="main-content">
             
-            <!-- Felső üdvözlő sáv -->
-            <header class="main-header">
-                <h2>Üdv újra, Edző! 👋</h2>
-                <button class="btn">+ Új edzés hozzáadása</button>
-            </header>
+            <!-- Navigációs menüpontok -->
+            <nav class="nav-links">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Classes</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Pages</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
 
-            <!-- STATISZTIKAI KÁRTYÁK -->
-            <section class="stats-grid">
-                <div class="card">
-                    <h3>Aktív tagok</h3>
-                    <p class="stat-number">142</p>
-                    <span class="stat-trend positive">+5 ezen a héten</span>
-                </div>
-                <div class="card">
-                    <h3>Mai edzések</h3>
-                    <p class="stat-number">28</p>
-                    <span class="stat-trend">8 folyamatban</span>
-                </div>
-                <div class="card">
-                    <h3>Terem telítettség</h3>
-                    <p class="stat-number">65%</p>
-                    <span class="stat-trend positive">Optimális</span>
-                </div>
-            </section>
+            <!-- Jobb oldali akció gomb -->
+            <div class="nav-actions">
+                <a href="#" class="btn-join">Join Us Today</a>
+            </div>
+        </div>
+    </header>
 
-            <!-- EDZÉSTERV / AKTIVITÁS TÁBLÁZAT -->
-            <section class="content-section card">
-                <h3>Mai ütemezett edzések</h3>
-                <table class="workout-table">
-                    <thead>
-                        <tr>
-                            <th>Időpont</th>
-                            <th>Tag neve</th>
-                            <th>Edzéstípus</th>
-                            <th>Állapot</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>16:30</td>
-                            <td>Kovács Péter</td>
-                            <td>Hipertrófia - Mell/Kar</td>
-                            <td><span class="badge badge-done">Kész</span></td>
-                        </tr>
-                        <tr>
-                            <td>17:45</td>
-                            <td>Nagy Anna</td>
-                            <td>Funkcionális Cross</td>
-                            <td><span class="badge badge-progress">Folyamatban</span></td>
-                        </tr>
-                        <tr>
-                            <td>19:00</td>
-                            <td>Szabó Gábor</td>
-                            <td>Erőemelés - Guggolás fokusz</td>
-                            <td><span class="badge badge-pending">Várakozik</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-        </main>
-    </div>
+    <!-- FŐ TARTALOM -->
+    <main class="container">
+        <div style="padding: 120px 0; text-align: center;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">OBTAIN YOUR GOALS</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Kezeld az edzéseket, kísérd figyelemmel a tagok fejlődését egyetlen modern, professzionális platformon.</p>
+        </div>
+    </main>
 
 </body>
 </html>
